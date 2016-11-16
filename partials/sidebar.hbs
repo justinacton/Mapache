@@ -1,5 +1,9 @@
 {{!-- Sidebar right --}}
 <div id="sidebar" class="col s12 sidebar u-h-b-lg">
+	{{!-- post Share Button and Suscribe newsletter --}}
+	<div class="row share-subscribe">		
+		{{> widget-newsletter}}
+	</div>
 
 	{{!-- 5 articles featured in page (home - author - tag) --}}
 	{{#is "home"}}

@@ -1,6 +1,6 @@
 <section id="ScrollBody" class="container u-p-t-2 {{#is "paged"}}margin-top{{/is}}">
 	<div class="row">
-		<div class="col s12 content">
+		<div class="col s12">
 			<div class="feed-wrapper">
 				{{#foreach posts}} {{> entry}} {{/foreach}}
 			</div>
@@ -9,13 +9,14 @@
 				{{"pagination"}}
 			{{else}}
 				<div class="pagination" style="display:none">
-					<a href="#" id="pagination" class="pagination-link" mapache-page="{{pagination.pages}}" mapache-limit="{{@blog.posts_per_page}}">Load more</a>
+					{{!-- <a href="#" id="pagination" class="pagination-link" mapache-page="{{pagination.pages}}" mapache-limit="{{@blog.posts_per_page}}">Load more</a> --}}
 				</div>
 			{{/is}}
-		</div>
+		</div>		
 
 		{{!-- Add Sidebar --}}
-		{{> "sidebar"}}
+		{{!-- {{> "sidebar"}} --}}
 
 	</div>
+	
 </section>

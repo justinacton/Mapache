@@ -35,10 +35,12 @@
 
 						{{!-- author, date, tag --}}
 						<div class="post-byline">
+						{{!--
 						{{#author}}
 							<a class="post-author-avatar u-h-b-md" href="{{url}}" style="background-image:url({{#if image}}{{image}}{{else}}{{asset "img/user-image.png"}}{{/if}})"></a>
-							By <strong><a href="{{url}}">{{name}}</a> — </strong>
+							By <strong><a href="{{url}}">{{name}}</a> — </strong> 
 						{{/author}}
+						--}}
 							<time class="timestamp" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
 							in {{tags limit="1"}}
 						</div>
@@ -50,7 +52,7 @@
 					{{/has}}
 
 					{{!-- Post share top --}}
-					{{> widget-post-share }}
+					{{!-- {{> widget-post-share }} --}}
 
 					{{!-- Post content body --}}
 					<div class="post-body">{{content}}</div>
@@ -60,12 +62,11 @@
 
 					{{!-- post Share Button and Suscribe newsletter --}}
 					<div class="row share-subscribe">
-						{{> widget-share}}
-						{{> widget-newsletter}}
+						{{> widget-share}}						
 					</div>
 
 					{{!-- Post author info --}}
-					{{> widget-post-author}}
+					{{!-- {{> widget-post-author}} --}}
 
 					{{!-- post Comments Section --}}
 					<div id="post-comments" class="post-comments">
@@ -78,9 +79,9 @@
 					{{> widget-post-related}}
 				</article>
 			</div>
-
+			 
 			{{> "sidebar"}}
-
+			
 		</div>
 	</div>
 </section>

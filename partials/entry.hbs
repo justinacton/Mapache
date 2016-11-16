@@ -11,24 +11,29 @@
 		</figure>
 		{{/if}}
 
-		<div class="col s12 {{#if image}}entry-body{{/if}}">
-			<div class="entry-category">{{tags limit="1"}}</div>
-			<h2 class="entry-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-
-			<div class="entry-byline">
-				<i class="i-chat"></i>
-				<a class="entry-comments" href="{{url}}#post-comments">
-					{{!-- Disqus Comments Count --}}
-					<span class="disqus-comment-count mapache-disqus" data-disqus-url="{{url absolute="true"}}">0</span>
-					{{!-- Facebook Comments Counts --}}
-					<span class="fb-comments-count mapache-facebook" data-href="{{url absolute="true"}}">0</span>
-					<span>Comments</span>
-				</a>
-				{{#author}}— by <strong><a class="entry-author" href="{{url}}">{{name}}</a></strong> —{{/author}}
-				<time class="entry-timeago timestamp" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
-			</div>
-
-			<div class="entry-excerpt u-h-b-lg">{{excerpt words="15"}}</div>
+		<div class="col s12 {{#if image}}entry-body{{/if}}">								
+								
+				<h2 class="entry-title home-header"><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+															
+				<div class="post-body">{{content}}</div>				
+				<div class="entry-byline">
+					<time class="entry-timeago timestamp" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at format="MMMM DD, YYYY"}}</time> - 
+					<span class="home-tags">
+						posted in {{tags limit="1"}} - 
+					</span>	
+					<i class="i-chat"></i>
+					<a class="entry-comments" href="{{url}}#post-comments">
+						{{!-- Disqus Comments Count --}}
+						<span class="disqus-comment-count mapache-disqus" data-disqus-url="{{url absolute="true"}}">0</span>
+						{{!-- Facebook Comments Counts --}}
+						<span class="fb-comments-count mapache-facebook" data-href="{{url absolute="true"}}">0</span>
+						<span>Comments</span>
+					</a>
+								
+				</div>	
+				{{#prev_post}}
+					<span class="home-prev-next"><a href="{{url}}"><i class="fa fa-chevron-left" title="{{date published_at format="MM/DD/YYYY"}} - {{title}}"></i>&nbsp;&nbsp;View Previous</a></span>
+				{{/prev_post}}			
 		</div>
 	</div>
 </article>
